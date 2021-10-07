@@ -7,7 +7,7 @@ import za.ac.nwu.ac.domain.persistence.AccountType;
 
 @Repository
 public interface AccountTypeRepository extends JpaRepository<AccountType, Long> {
-
+/*
     @Query(value = "SELECT " +
             " ACCOUNT_TYPE_ID," +
             " ACCOUNT_TYPE_NAME," +
@@ -16,7 +16,7 @@ public interface AccountTypeRepository extends JpaRepository<AccountType, Long> 
             " FROM " +
             " ACCOUNTSYSTEM.ACCOUNT_TYPE " +
             " WHERE MNEMONIC = :mnemonic", nativeQuery = true)
-    AccountType getAccountTypeByMnemonicNativeQuery(String mnemonic);
+    AccountType getAccountTypeByMnemonicNativeQuery(String mnemonic);*/
 
     @Query(value = "SELECT " +
             " at" +
@@ -24,7 +24,7 @@ public interface AccountTypeRepository extends JpaRepository<AccountType, Long> 
             " AccountType at" +
             " WHERE at.mnemonic = :mnemonic")
     AccountType getAccountTypeByMnemonic(String mnemonic);
-
+/*
     @Query(value = "SELECT new za.ac.nwu.ac.domain.dto.AccountTypeDto( " +
             " at.mnemonic," +
             " at.accountTypeName," +
@@ -32,5 +32,5 @@ public interface AccountTypeRepository extends JpaRepository<AccountType, Long> 
             " FROM " +
             " accountType.at " +
             " WHERE at.mnemonic = :mnemonic")
-    AccountType getAccountTypeDtoByMnemonic(String mnemonic);
+    AccountType getAccountTypeDtoByMnemonic(String mnemonic);*/
 }
