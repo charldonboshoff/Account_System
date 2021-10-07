@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "ACCOUNT_TX")
+@Table(name = "ACCOUNT_TYPE")
 public class AccountTransaction implements Serializable {
 
     private static final long serialVersionUID = 1636276203670716488L;

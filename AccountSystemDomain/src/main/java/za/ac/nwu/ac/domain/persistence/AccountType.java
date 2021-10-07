@@ -16,6 +16,7 @@ public class AccountType implements Serializable {
     private String mnemonic;
     private String accountTypeName;
     private LocalDate creationDate;
+
     private Set<AccountTransaction> accountTransactions;
 
     public AccountType() {
@@ -27,10 +28,13 @@ public class AccountType implements Serializable {
         this.accountTypeName = accountTypeName;
         this.creationDate = creationDate;
     }
+    public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
+        this.mnemonic = mnemonic;
+        this.accountTypeName = accountTypeName;
+        this.creationDate = creationDate;
+    }
 
     @Id
-    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VIT_RSA_GENERIC_SEQ")
     @Column(name = "ACCOUNT_TYPE_ID")
     public Long getAccountTypeId() {
         return accountTypeId;
