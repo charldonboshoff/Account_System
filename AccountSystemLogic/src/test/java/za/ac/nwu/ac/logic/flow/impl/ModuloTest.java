@@ -25,12 +25,7 @@ public class ModuloTest {
         assertNotNull("Should not be null", result);
         assertEquals("Should be value 4", 4, result.intValue());
     }
-/*
-    @Test
-    public void testModByO() {
-        Integer result =  mod.doMod(9, 0);
-        assertNull("Should be null", result);
-    }*/
+
     //For throwing exceptions
     @Test()
     public void testModByO() {
