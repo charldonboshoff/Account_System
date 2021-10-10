@@ -20,7 +20,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CreateAccountTypeFlowImplTest {
-    //Run test class with mockito
+    //Unit test with mockito
 
     @Mock
     private AccountTypeTranslator translator;
@@ -38,6 +38,7 @@ public class CreateAccountTypeFlowImplTest {
 
     @Test
     public void create() {
+
         AccountTypeDto accountTypeDto = new AccountTypeDto(null, null, LocalDate.now());
         when(translator.create(any(AccountTypeDto.class))).then(returnsFirstArg());
         AccountTypeDto result = flow.create(new AccountTypeDto());
